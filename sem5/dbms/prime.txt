@@ -1,0 +1,24 @@
+DECLARE  
+   prime boolean ;  
+   i number ; 
+PROCEDURE is_prime(b in number) IS  
+BEGIN  
+  prime := True ;  
+  i := 2 ; 
+ 
+  for i in 2..(b-1) loop 
+    if mod(b,i) = 0 then  
+        prime := False ; 
+    end if ; 
+  end loop ; 
+ 
+  if prime then  
+    dbms_output.put_line(b || ' is prime..!') ; 
+  else 
+    dbms_output.put_line(b || ' is not prime..!') ; 
+  end if ; 
+END;   
+BEGIN   
+   is_prime(10); 
+   is_prime(11) ; 
+END ; 

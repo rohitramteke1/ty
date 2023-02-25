@@ -1,0 +1,22 @@
+declare
+    i number ;
+    n number ;
+    res number ;
+    temp number ;
+Procedure reverser(inp in number) is
+
+begin
+    n := 0 ;
+    temp := inp ;
+    while temp > 0 loop
+        res := mod(temp ,10) ;
+        n := n*10 + res ;
+        temp := trunc(temp/10) ;
+    end loop ; 
+
+    dbms_output.put_line('Reversed Number : ' || n) ;
+end ;
+begin
+    reverser(1234) ;
+end;
+/

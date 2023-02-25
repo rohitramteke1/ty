@@ -1,0 +1,26 @@
+CREATE DATABASE Mock ;
+
+CREATE TABLE Customer ( Cust_name varchar(255) , Street varchar(255) , City varchar(255)) ; 
+
+CREATE DOMAIN user_data AS REAL CHECK
+(value >= 0 AND value <= 10);
+
+insert into Customer 
+VALUES ('Arun' , 'Shivaji Street' , 'Aurangabad' ) ;
+
+insert into Customer 
+VALUES ('Binod' , 'Sangam Street' , 'Buldhana' ) ;
+
+insert into Customer 
+VALUES ('Chinmay' , 'Falana Street' , 'Jalgaon' ) ; 
+
+select * from Customer ;
+
+ALTER TABLE Customer 
+ADD Salary varchar (255) ;
+
+ALTER TABLE Customer 
+DROP COLUMN Salary ;
+
+Delete From Customer Where City = 'Jalgaon' ;
+Alter Table Customer Change Column Street Rasta varchar(255)  ;
